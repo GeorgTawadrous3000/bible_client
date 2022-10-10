@@ -26,12 +26,12 @@ export default function Footer() {
     }
 
     return (
-        <footer className="bg-dark text-center text-white">
+        <footer className="bg-dark text-center text-white" dir="ltr">
             <div className="container p-4">
 
                 <section className="mb-6">
                 <Button onClick={toggleLang}>{lang == "en" ? "عربي" : "English"}</Button>
-                &nbsp;
+                &nbsp;&nbsp;&nbsp;
                 <DarkModeToggle
                     onChange={toggleTheme}
                     checked={theme == "dark"}
@@ -43,7 +43,7 @@ export default function Footer() {
 
             <div className="text-center p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
                 © 2022 Copyright:
-                <a className="text-white" href="http://georgejosephportfolio.rf.gd/main/index.php">georgejosephportfolio.rf.gd</a>
+                <a className="text-white" href="https://georgejosephportfolio.rf.gd/main/index.php">georgejosephportfolio.rf.gd</a>
             </div>
 
 
