@@ -27,7 +27,7 @@ export default function Footer() {
     }
 
     return (
-        <footer className="bg-light text-center text-white">
+        <footer className="text-center text-white" style={{backgroundColor: theme == "dark" ? "rgb(48,48,48)" : "#0a4275"}}>
             <div className="container p-4">
 
                 <section className="mb-6">
