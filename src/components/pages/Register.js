@@ -43,7 +43,7 @@ export default function Register(){
                 toast.error("Error", {theme: theme})
             }
         }).catch((error) => {
-            toast.error(error, {theme: theme})
+            toast.error(error.response.data, {theme: theme})
         })
     }
 
