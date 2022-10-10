@@ -32,8 +32,6 @@ export default function Footer() {
                       onClick={toggleTheme}
                       id="dark-mode-toggle-1"
                       appearance="switch"
-                      dark="Dark"
-                      light="Light"
                   ></dark-mode-toggle>
                 
                 </section>
