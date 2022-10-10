@@ -17,11 +17,8 @@ export default function Footer() {
     }
 
     const toggleTheme = () => {
-        if(theme == "dark"){
-            changeTheme("light")
-        }else{
-            changeTheme("dark")  
-        }
+        const toggle = document.querySelector('dark-mode-toggle');
+        changeTheme(toggle.mode)
     }
 
     return (
@@ -32,12 +29,12 @@ export default function Footer() {
                 <Button onClick={toggleLang}>{lang == "en" ? "عربي" : "English"}</Button>
                 &nbsp;&nbsp;&nbsp;
                 <dark-mode-toggle
+                      onClick={toggleTheme}
                       id="dark-mode-toggle-1"
                       legend="Theme Switcher"
                       appearance="switch"
                       dark="Dark"
                       light="Light"
-                      remember="Remember this"
                   ></dark-mode-toggle>
                 
                 </section>
