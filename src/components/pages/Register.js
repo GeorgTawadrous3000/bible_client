@@ -3,7 +3,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { Col, Container, Form, Row, Button } from 'react-bootstrap'
 import {useNavigate} from 'react-router-dom'
 import axios from 'axios'
-import { ThemeContext, UserContext } from '../../App'
+import { ThemeContext, UserContext, LangContext } from '../../App'
 import { Consts } from '../../Consts'
 
 export default function Register(){
@@ -14,6 +14,7 @@ export default function Register(){
     let navigate = useNavigate()
     
     const { user, setUserLocally } = useContext(UserContext)
+    const {lang} = useContext(LangContext)
     const { theme } = useContext(ThemeContext)
     
 
@@ -33,7 +34,8 @@ export default function Register(){
             username: username,
             email: email,
             password: password,
-            userAgent: ["browser", navigator.userAgent, "online"]
+            userAgent: ["browser", navigator.userAgent, "online"],
+            lang: lang
         }).then((response) => {
             if(response.status === 200){
                 var user = response.data
