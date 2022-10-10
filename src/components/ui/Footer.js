@@ -27,12 +27,12 @@ export default function Footer() {
     }
 
     return (
-        <footer className="bg-dark text-center text-white">
+        <footer className="bg-light text-center text-white">
             <div className="container p-4">
 
                 <section className="mb-6">
                 <Button onClick={toggleLang}>{lang == "en" ? "عربي" : "English"}</Button>
-                &nbsp;
+                &nbsp;&nbsp;&nbsp;
                 <ToggleButton isDark={theme == "dark"}
                     onChange={toggleTheme}
                     />
