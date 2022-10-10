@@ -1,8 +1,6 @@
 import React, { useContext } from 'react'
 import { LangContext, ThemeContext } from '../../App'
 import { Button } from 'react-bootstrap'
-import ToggleButton from "react-theme-toggle-button";
-import "react-theme-toggle-button/dist/index.css";
 
 
 export default function Footer() {
@@ -33,9 +31,14 @@ export default function Footer() {
                 <section className="mb-6">
                 <Button onClick={toggleLang}>{lang == "en" ? "عربي" : "English"}</Button>
                 &nbsp;&nbsp;&nbsp;
-                <ToggleButton isDark={theme == "dark"}
-                    onChange={toggleTheme}
-                    />
+                <dark-mode-toggle
+                      id="dark-mode-toggle-1"
+                      legend="Theme Switcher"
+                      appearance="switch"
+                      dark="Dark"
+                      light="Light"
+                      remember="Remember this"
+                  ></dark-mode-toggle>
                 
                 </section>
             </div>
