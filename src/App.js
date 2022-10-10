@@ -81,9 +81,9 @@ function App() {
 
   useEffect(() => {
     if (theme === "dark") {
-      style.href = 'https://firebasestorage.googleapis.com/v0/b/eailio.appspot.com/o/darkbootstrap.min.css?alt=media&token=b004450f-438b-43f1-947a-26058e738c34';
+      style.href = 'https://bible-client.vercel.app/darkbootstrap.min.css';
     } else {
-      style.href = 'https://firebasestorage.googleapis.com/v0/b/eailio.appspot.com/o/bootstrap.min.css?alt=media&token=cc625f34-d0fb-4881-b4c2-0cd3396c2af5';
+      style.href = 'https://bible-client.vercel.app/bootstrap.min.css';
     }
   }, [theme])
   
