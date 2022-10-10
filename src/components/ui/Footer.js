@@ -28,12 +28,12 @@ export default function Footer() {
                 <section className="mb-6">
                 <Button onClick={toggleLang}>{lang == "en" ? "عربي" : "English"}</Button>
                 &nbsp;&nbsp;&nbsp;
+                <div onClick={toggleTheme}>
                 <dark-mode-toggle
-                      onClick={toggleTheme}
                       id="dark-mode-toggle-1"
                       appearance="switch"
                   ></dark-mode-toggle>
-                
+                </div>
                 </section>
             </div>
 
