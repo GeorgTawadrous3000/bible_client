@@ -31,7 +31,6 @@ export default function Footer() {
                 <dark-mode-toggle
                       onClick={toggleTheme}
                       id="dark-mode-toggle-1"
-                      legend="Theme Switcher"
                       appearance="switch"
                       dark="Dark"
                       light="Light"
