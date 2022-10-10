@@ -81,9 +81,9 @@ function App() {
 
   useEffect(() => {
     if (theme === "dark") {
-      //style.href = 'https://bible-client.vercel.app/darkbootstrap.min.css';
+      style.href = 'https://bible-client.vercel.app/darkbootstrap.min.css';
     } else {
-      //style.href = 'https://bible-client.vercel.app/bootstrap.min.css';
+      style.href = 'https://bible-client.vercel.app/bootstrap.min.css';
     }
   }, [theme])
   
