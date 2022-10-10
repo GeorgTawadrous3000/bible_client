@@ -79,11 +79,21 @@ function App() {
     getTheme()
   }, [])
 
+  let darkSheet = document.styleSheets[1]
+  let lightSheet = document.styleSheets[0]
+  
   useEffect(() => {
-    if (theme === "dark") {
+    /*if (theme === "dark") {
       style.href = 'https://bible-client.vercel.app/darkbootstrap.min.css';
     } else {
       style.href = 'https://bible-client.vercel.app/bootstrap.min.css';
+    }*/
+    if(theme == "dark") {
+        darkSheet.disabled = false;
+        lightSheet.disabled = true;
+    } else {
+        darkSheet.disabled = true;
+        lightSheet.disabled = false;
     }
   }, [theme])
   
