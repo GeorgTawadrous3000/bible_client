@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { LangContext, ThemeContext } from '../../App'
 import { Button } from 'react-bootstrap'
+import DarkModeToggle from "react-dark-mode-toggle"
 
 
 export default function Footer() {
@@ -17,23 +18,26 @@ export default function Footer() {
     }
 
     const toggleTheme = () => {
-        const toggle = document.querySelector('dark-mode-toggle');
-        changeTheme(toggle.mode)
+        if(theme == "dark"){
+            changeTheme("light")
+        }else{
+            changeTheme("dark")  
+        }
     }
 
     return (
-        <footer className="text-center text-white" style={{backgroundColor: theme == "dark" ? "rgb(48,48,48)" : "#0a4275"}}>
+        <footer className="bg-dark text-center text-white">
             <div className="container p-4">
 
                 <section className="mb-6">
                 <Button onClick={toggleLang}>{lang == "en" ? "عربي" : "English"}</Button>
-                &nbsp;&nbsp;&nbsp;
-                <div onClick={toggleTheme}>
-                <dark-mode-toggle
-                      id="dark-mode-toggle-1"
-                      appearance="switch"
-                  ></dark-mode-toggle>
-                </div>
+                &nbsp;
+                <DarkModeToggle
+                    onChange={toggleTheme}
+                    checked={theme == "dark"}
+                    speed={2}
+                    />
+                
                 </section>
             </div>
 
