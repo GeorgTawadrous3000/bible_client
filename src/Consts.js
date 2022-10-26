@@ -1,3 +1,3 @@
 export const Consts = {
-    "api_url":"https://bible-server.onrender.com/api/"
+    "api_url":"https://bible-server-api.herokuapp.com/api/"
 }
