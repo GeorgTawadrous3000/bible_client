@@ -122,16 +122,16 @@ main {
 
 
 .normalStyledVerse:hover{
-  background-color: #317ea0;
+  background-color: #160d45;
   color: white;
 }
 
 .clickedStyledVerse{
-  background-color: #317ea0;
+  background-color: #160d45;
   color: white;
 }
 
 .highlightedStyledVerse{
-  background-color: #160d45;
+  background-color: #317ea0;
   color: white;
 }
