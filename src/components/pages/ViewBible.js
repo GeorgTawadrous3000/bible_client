@@ -172,9 +172,9 @@ export default function ViewBible(){
             }
             if(book && chapter){
 		//var doneVerse = progress["doneChapters"][chapter]
-		document.querySelector(`[verseNumber="${doneVerse}"]`).scrollIntoView()
-		    console.log(`[verseNumber="${doneVerse}"]`);
-		console.log(document.querySelector(`[verseNumber="${doneVerse}"]`))
+		//document.querySelector(`[verseNumber="${doneVerse}"]`).scrollIntoView()
+		//    console.log(`[verseNumber="${doneVerse}"]`);
+		//console.log(document.querySelector(`[verseNumber="${doneVerse}"]`))
                 getHighlightedVerses()
             }
         }
