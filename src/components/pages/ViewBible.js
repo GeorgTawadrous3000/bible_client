@@ -63,6 +63,7 @@ export default function ViewBible(){
         }).then(response=>{
             if(response.status === 200){
                 setProgresses(response.data)
+		    print(response.data)
 		if(book && chapter){
 			var doneVerse = response.data["doneChapters"][chapter]
 			document.querySelector(`[verseNumber="${doneVerse}"]`).scrollIntoView()
