@@ -63,6 +63,12 @@ export default function ViewBible(){
         }).then(response=>{
             if(response.status === 200){
                 setProgresses(response.data)
+		if(book && chapter){
+			var doneVerse = response.data["doneChapters"][chapter]
+			document.querySelector(`[verseNumber="${doneVerse}"]`).scrollIntoView()
+			console.log(`[verseNumber="${doneVerse}"]`);
+			console.log(document.querySelector(`[verseNumber="${doneVerse}"]`))
+            	}
             }
         })
     }
@@ -170,15 +176,10 @@ export default function ViewBible(){
             }else{
                 clearInterval(progressInterval)
             }
-            if(book && chapter){
-		getProgress()
-		var doneVerse = progresses["doneChapters"][chapter]
-		document.querySelector(`[verseNumber="${doneVerse}"]`).scrollIntoView()
-		console.log(`[verseNumber="${doneVerse}"]`);
-		console.log(document.querySelector(`[verseNumber="${doneVerse}"]`))
-                getHighlightedVerses()
-            }
-        }
+	    if(book && chapter){    
+            	getHighlightedVerses()
+	    }
+	}
         
         // scroll listener to set progress
         window.addEventListener('scroll', function() {
