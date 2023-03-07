@@ -171,6 +171,7 @@ export default function ViewBible(){
                 clearInterval(progressInterval)
             }
             if(book && chapter){
+		getProgress()
 		var doneVerse = progresses["doneChapters"][chapter]
 		document.querySelector(`[verseNumber="${doneVerse}"]`).scrollIntoView()
 		console.log(`[verseNumber="${doneVerse}"]`);
