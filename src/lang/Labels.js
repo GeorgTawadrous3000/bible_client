@@ -78,5 +78,9 @@ export const Labels = {
     noteH2:{
         en: "Your Note",
         ar: "ملاحظتك"
+    },
+    viewBible: {
+        en: "View Bible",
+        ar: "عرض الكتاب المقدس"
     }
 }

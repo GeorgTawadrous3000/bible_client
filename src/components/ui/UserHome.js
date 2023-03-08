@@ -94,7 +94,7 @@ export default function UserHome(){
             <br/>
             <br/>
             <br/>
-            <Link to="/viewbible" className="btn btn-outline-primary">View Bible</Link><br/>
+            <Link to="/viewbible" className="btn btn-outline-primary">{ Labels.viewBible[lang] }</Link><br/>
             <br/>
             <br/>
             <br/>
