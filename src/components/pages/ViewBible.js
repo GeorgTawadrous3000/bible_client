@@ -63,13 +63,16 @@ export default function ViewBible(){
         }).then(response=>{
             if(response.status === 200){
                 setProgresses(response.data)
-		    console.log(response.data[0]["doneChapters"])
-		if(book && chapter){
-			var doneVerse = response.data[0]["doneChapters"][chapter]
-			document.querySelector(`[verseNumber="${doneVerse}"]`).scrollIntoView()
-			console.log(`[verseNumber="${doneVerse}"]`);
-			console.log(document.querySelector(`[verseNumber="${doneVerse}"]`))
-            	}
+    		    console.log(response.data[0]["doneChapters"])
+                const bookData = require(`../../bibleJSON/${book}.json`)
+                var doneVerse = response.data[0]["doneChapters"][chapter]
+                if(book && chapter){
+                    if(doneVerse != bookData[chapter].noOfVerses){
+                        document.querySelector(`[verseNumber="${doneVerse}"]`).scrollIntoView()
+                        console.log(`[verseNumber="${doneVerse}"]`);
+                        console.log(document.querySelector(`[verseNumber="${doneVerse}"]`))
+                    }
+                }
             }
         })
     }
