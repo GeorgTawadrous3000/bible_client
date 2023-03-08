@@ -68,7 +68,7 @@ export default function ViewBible(){
                 var doneVerse = response.data[0]["doneChapters"][chapter]
                 if(book && chapter){
                     console.log(bookData)
-                    if(doneVerse !== bookData[chapter].noOfVerses){
+                    if(doneVerse !== bookData.chapters[chapter].noOfVerses){
                         document.querySelector(`[verseNumber="${doneVerse}"]`).scrollIntoView()
                         console.log(`[verseNumber="${doneVerse}"]`);
                         console.log(document.querySelector(`[verseNumber="${doneVerse}"]`))
