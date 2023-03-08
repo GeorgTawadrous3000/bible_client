@@ -27,8 +27,8 @@
     "react-scroll-up-button": "^1.6.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts start --legacy-peer-deps",
+    "build": "react-scripts build --legacy-peer-deps",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
