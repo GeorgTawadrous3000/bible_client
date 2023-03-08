@@ -27,7 +27,7 @@ export default function Footer() {
 
     return (
         <footer className="bg-dark text-center text-white" dir="ltr">
-            <ScrollUpButton />
+            <ScrollToTop smooth />
             <div className="container p-4">
 
                 <section className="mb-6">
