@@ -67,6 +67,7 @@ export default function ViewBible(){
                 const bookData = require(`../../bibleJSON/${book}.json`)
                 var doneVerse = response.data[0]["doneChapters"][chapter]
                 if(book && chapter){
+                    console.log(bookData)
                     if(doneVerse !== bookData[chapter].noOfVerses){
                         document.querySelector(`[verseNumber="${doneVerse}"]`).scrollIntoView()
                         console.log(`[verseNumber="${doneVerse}"]`);
