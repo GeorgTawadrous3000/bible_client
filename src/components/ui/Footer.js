@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { LangContext, ThemeContext } from '../../App'
 import { Button } from 'react-bootstrap'
 import DarkModeToggle from "react-dark-mode-toggle"
-
+import ScrollToTop from "react-scroll-to-top";
 
 export default function Footer() {
 

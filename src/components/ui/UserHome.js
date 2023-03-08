@@ -6,11 +6,13 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder'
 import { Consts } from '../../Consts'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import { Labels } from '../../lang/Labels'
 
 export default function UserHome(){
     
     const { theme } = useContext(ThemeContext)
     const { user } = useContext(UserContext)
+    const { lang } = useContext(LangContext)
     const [limit, setLimit] = useState(100)
     var [refreshVar, setRefreshVar] = useState("")
     var [likedIds, setLikedIds] = useState([])
