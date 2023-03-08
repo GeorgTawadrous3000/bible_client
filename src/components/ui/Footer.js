@@ -43,8 +43,8 @@ export default function Footer() {
             </div>
 
             <div className="text-center p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
-                © 2022 Copyright:
-                <a className="text-white" href="https://georgejosephportfolio.rf.gd/main/index.php">georgejosephportfolio.rf.gd</a>
+                © 2023 Copyright:
+                <a className="text-white" href="https://portfolio.georgejoseph.rf.gd">portfolio.georgejoseph.rf.gd</a>
             </div>
 
 
