@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Container } from 'react-bootstrap'
 import NavigationBar from '../ui/NavigationBar'
 import { LangContext } from '../../App'
-import React, { useContext, useEffect, useState } from 'react'
 import { Labels } from '../../lang/Labels'
 
 export default function About() {
