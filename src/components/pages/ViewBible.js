@@ -70,7 +70,7 @@ export default function ViewBible(){
                     console.log(bookData.chapters[chapter].noOfVerses)
                     console.log(doneVerse)
 
-                    if(doneVerse != bookData.chapters[chapter].noOfVerses){
+                    if(doneVerse != bookData.chapters[chapter-1].noOfVerses){
                         document.querySelector(`[verseNumber="${doneVerse}"]`).scrollIntoView()
                         console.log(`[verseNumber="${doneVerse}"]`);
                         console.log(document.querySelector(`[verseNumber="${doneVerse}"]`))
