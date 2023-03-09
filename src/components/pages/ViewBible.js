@@ -72,6 +72,7 @@ export default function ViewBible(){
 
                     if(doneVerse != bookData.chapters[chapter-1].noOfVerses){
                         document.querySelector(`[verseNumber="${doneVerse}"]`).scrollIntoView()
+                        document.querySelector(`[verseNumber="${doneVerse}"]`).className+="clickedStyledVerse"
                         console.log(`[verseNumber="${doneVerse}"]`);
                         console.log(document.querySelector(`[verseNumber="${doneVerse}"]`))
                     }
