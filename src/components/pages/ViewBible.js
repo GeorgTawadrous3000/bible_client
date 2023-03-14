@@ -491,6 +491,7 @@ export default function ViewBible(){
                             }).then((response) => {
                                 console.log(response.data)
                                 toast.success(Labels["progressSaved"][lang], {theme: theme})
+                                setAnchorEl(false)
                             })
 
                         }}><CloudSyncIcon /></button>&nbsp;&nbsp;&nbsp;
