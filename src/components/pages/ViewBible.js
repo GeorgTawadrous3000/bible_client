@@ -17,6 +17,7 @@ import SaveIcon from '@mui/icons-material/Save'
 import NoteIcon from '@mui/icons-material/Note'
 import DeleteIcon from '@mui/icons-material/Delete'
 import CloseIcon from '@mui/icons-material/Close'
+import CloudSyncIcon from '@mui/icons-material/CloudSync'
 
 export default function ViewBible(){
     
@@ -480,6 +481,19 @@ export default function ViewBible(){
             <Popper id={id} open={open} anchorEl={anchorEl}>
                 <Box sx={{ border: 1, p: 1, bgcolor: theme === "dark" ? "black" : "white"}}>
                     <div style={{display: "inline-block"}}>
+                        <button className="btn btn-outline-primary" onClick={()=>{
+                            axios.post(Consts["api_url"]+"bible/setUserProgress", {
+                                email: user.email, 
+                                username: user.username,
+                                book: book,
+                                chapter: chapter,
+                                verse: Number(anchorEl.getAttribute("verseNumber"))
+                            }).then((response) => {
+                                console.log(response.data)
+                                toast.success(Labels["progressSaved"][lang], {theme: theme})
+                            })
+
+                        }}><CloudSyncIcon /></button>&nbsp;&nbsp;&nbsp;
                         <button className="btn btn-outline-primary" onClick={()=>{setAnchorEl(null)}}><CloseIcon /></button>&nbsp;&nbsp;&nbsp;
                         <button className="btn btn-outline-primary"  onClick={saveHighlightedVerse}><SaveIcon /></button>&nbsp;&nbsp;&nbsp;
                         <button className="btn btn-outline-primary" onClick={()=>{
