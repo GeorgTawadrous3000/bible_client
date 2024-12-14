@@ -1,4 +1,4 @@
 export const Consts = {
-    "api_url":"https://magenta-goose-cuff.cyclic.app/api/"
+    "api_url":"https://bible-server-production.up.railway.app/api/"
     
 }
