@@ -1,4 +1,4 @@
 export const Consts = {
-    "api_url":"https://bible-server-production.up.railway.app/api/"
+    "api_url":"/proxy/https://bible-server-production.up.railway.app/api/"
     
 }
